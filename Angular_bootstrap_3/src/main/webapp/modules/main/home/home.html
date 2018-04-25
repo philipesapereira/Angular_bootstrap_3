@@ -1,0 +1,75 @@
+<titulo-funcionalidade nome="Home" confidencial="#20"/>
+
+<form name="form" class="form-horizontal" novalidate>
+
+	<page-filter pesquisar="vm.listarTestes()">
+	  	
+		<form-group-date-range 
+			label="Data" 
+			fg-id="data" 
+			ng-model="vm.filtro.dateRange">
+		</form-group-date-range>
+	
+		<form-group label="Endereco" fg-id="endereco">
+		    <input ng-model="vm.filtro.endereco">
+	    </form-group>
+	
+		<form-group label="UF" fg-id="uf">
+		    <select ng-model="vm.filtro.uf">
+				<option selected="selected" value="">Selecione</option>
+		    	<option value="rj">RJ</option>
+		    	<option value="sp">SP</option>
+		    	<option value="mg">MG</option>
+		    </select>
+		</form-group>
+	
+	</page-filter>
+	
+  	<pagination ng-model="vm.paginacaoContainer">
+		<pagination-head>
+			<button title="Novo Registro" type="button" class="btn btn-default btn-sm">
+				<span class="glyphicon glyphicon-pencil"></span> <span>Incluir</span>
+			</button>
+		</pagination-head>
+		
+    	<table class="table table-bordered table-striped table-condensed">
+			<thead>
+			    <tr>
+			      <th scope="col">Id</th>
+			      <th scope="col">Nome</th>
+			      <th scope="col">Sobrenome</th>
+			      <th scope="col">Username</th>
+			      <th scope="col">UF</th>
+			      <th scope="col" class="btn-col"></th>
+			      <th scope="col" class="btn-col"></th>
+			      <th scope="col" class="btn-col"></th>
+			    </tr>
+			 </thead>
+			 <tbody>
+				 <tr ng-repeat="item in vm.paginacaoContainer.lista">
+					<td>{{item.id}}</td>
+					<td>{{item.nome}}</td>
+					<td>{{item.sobreNome}}</td>
+					<td>{{item.userName}}</td>
+					<td>{{item.uf}}</td>
+					<td class="text-center">
+				      	<button title="Editar" type="button" class="btn btn-default btn-xs">
+							<span class="glyphicon glyphicon-edit"></span>
+						</button>
+					</td>
+					<td class="text-center">
+				    	<button title="Excluir" type="button" class="btn btn-default btn-xs">
+							<span class="glyphicon glyphicon-trash"></span>
+						</button>
+					</td>
+					<td class="text-center">
+				    	<button title="Detalhar" type="button" class="btn btn-default btn-xs">
+							<span class="glyphicon glyphicon-search"></span>
+						</button>
+					</td>
+			    </tr>
+			  </tbody>
+  		</table>
+	</pagination>
+
+</form>

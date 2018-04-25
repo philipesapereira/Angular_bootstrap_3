@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+    <title>Exemplo de angular 1 com bootstrap 3</title>
+
+    <link href="./css/bootstrap.3.3.7.css" rel="stylesheet">
+	<link href="./css/custom.css" rel="stylesheet">
+	<link href="./css/custom-bootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="./lib/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="./lib/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="./lib/LABjs.js"></script>
+	<script src="./app/scriptLoadConf.js"></script>    
+  </head>
+
+  <body class="left-menu-isOpen">
+	
+    <header class="site-header" ng-include="'./app/template/header.html'"></header>	
+
+	<menu-sgr></menu-sgr>
+	
+	<main class="main-content">
+		<div id="mensagem"></div>
+		<div ui-view></div>
+	</main>
+
+	<!-- 
+	<footer class="site-footer" ng-include="'./app/template/footer.html'"></footer>
+	 -->
+
+	
+  </body>
+</html>

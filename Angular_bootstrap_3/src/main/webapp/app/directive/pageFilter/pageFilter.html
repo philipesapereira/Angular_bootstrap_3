@@ -1,0 +1,17 @@
+<div class="panel panel-default panel-filtro" ng-init="filtroOpen = true">
+  	<div class="panel-heading">
+  		<h2>Filtro</h2>
+    	<button type="button" class="btn btn-default btn-xs btn-toggle-filtro" ng-click="filtroOpen = !filtroOpen">
+			<span class="glyphicon glyphicon-eye-{{filtroOpen?'close':'open'}}"></span>
+		</button>
+  	</div>
+  	<div class="panel-body" ng-show="filtroOpen" ng-transclude></div>
+  	<div class="panel-footer" ng-show="filtroOpen">
+		<button 
+			ng-click="pesquisar()"
+		  	class="btn btn-sm btn-primary" 
+		  	type="button"
+		  	>pesquisar</button>
+		  
+	</div>
+</div>

@@ -1,0 +1,24 @@
+<nav class="left-navbar">
+	<div class="leftMenu-topArea" ng-init="leftMenuOpen = true">
+		<button type="button" class="btn btn-default btn-xs" 
+			onclick="$('body').toggleClass('left-menu-isOpen');"
+			ng-click="leftMenuOpen = !leftMenuOpen"
+			>
+			<span class="glyphicon glyphicon-eye-{{leftMenuOpen?'close':'open'}}"></span>
+		</button>
+	</div>
+	
+	<div ng-show="leftMenuOpen">
+		<ul class="nav nav-sidebar">
+			<li ng-if="menu['1'].codigo">
+				<a ui-sref="home">{{menu['1'].nome}}</a>
+			</li>
+			
+			
+			<li><a href="#!reports">Reports</a></li>
+			<li><a href="#">Analytics</a></li>
+			<li><a href="#">Export</a></li>
+		</ul>
+	
+	</div>
+</nav>

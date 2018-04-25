@@ -1,0 +1,25 @@
+<div id="form-group-{{id}}" class="form-group form-group-sm has-error" >
+    <label for="dataInicio-{{id}}" class="control-label col-lg-2 col-sm-3">{{label}}</label>
+    <div class="col-lg-2 col-sm-3">
+	    <input 
+	    	type="date" 
+	    	id="dataInicio-{{id}}" 
+	    	name="dataInicio-{{id}}"
+	    	class="form-control" 
+	    	ng-model="dateRange.inicio"
+	    	>
+    </div>
+    
+    <div class="col-sm-1 text-center">a</div>
+    
+    <div class="col-lg-2 col-sm-3">
+	    <input 
+	    	type="date" 
+	    	id="dataFim-{{id}}" 
+	    	name="dataFim-{{id}}"
+	    	class="form-control"
+	    	ng-model="dateRange.fim"
+	    	>
+    </div>
+  	<span class="help-block"></span>
+</div>
