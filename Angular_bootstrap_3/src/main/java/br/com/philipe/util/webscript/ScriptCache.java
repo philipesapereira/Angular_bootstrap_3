@@ -63,6 +63,7 @@ public class ScriptCache {
 			,"/app/directive/pagination/pagination.js"
 			,"/app/directive/formGroup/formGroup.js"
 			,"/app/directive/formGroupDateRange/formGroupDateRange.js"
+			,"/app/directive/picklist/picklistMensagem.js"
 			,"/modules/main/config.js"
 			,"/modules/main/home/homeCtrl.js"
 		};

@@ -29,6 +29,13 @@
 			,paginaAtual	: 1
 		};
 		
+		vm.listaA = [
+             {id:'1',codigo:'<msg_a>',grupo:true}
+             ,{id:'2',codigo:'<msg_b>',grupo:true}
+             ,{id:'3',codigo:'<msg_c>',grupo:false}
+             ,{id:'4',codigo:'<msg_d>',grupo:false}
+         ];
+		vm.listaB = [];
 		
 		//funcoes publicas
 		vm.listarTestes = listarTestes;
@@ -54,6 +61,8 @@
 			load();
 			vm.paginacaoContainer.listaCompleta = database;
 			vm.paginacaoContainer.totalItens = database.length;
+			
+			console.log(vm.listaB);
 		}
 		
 		function load(){
